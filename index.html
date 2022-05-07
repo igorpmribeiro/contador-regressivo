@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <title>Contador Regressivo</title>
+</head>
+
+<body class="preload">
+  <header>
+    <h1>Contador Regressivo</h1>
+  </header>
+  <div class="container">
+    <form class="pick-date" id="form-date">
+      <input type="datetime-local" name="taregt-date" id="target-date">
+      <button type="submit" id="btn-app">Iniciar Contador</button>
+    </form>
+    <div class="contador">
+      <ul>
+        <li>
+          <span id="future-day">00</span>
+          <span class="date-info">Dia(s)</span>
+        </li>
+        <li>
+          <span id="future-hour">00</span>
+          <span class="date-info">Hora(s)</span>
+        </li>
+        <li>
+          <span id="future-min">00</span>
+          <span class="date-info">Minuto(s)</span>
+        </li>
+        <li>
+          <span id="future-sec">00</span>
+          <span class="date-info">Segundo(s)</span>
+        </li>
+      </ul>
+      <button id="newCount" onClick="window.location.reload();">Novo contador</button>
+    </div>
+  </div>
+  <script>
+    $(window).load(function () {
+      $("body").removeClass("preload");
+    });
+  </script>
+  <script src="app.js"></script>
+</body>
+
+</html>

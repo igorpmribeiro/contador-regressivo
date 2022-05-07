@@ -1,0 +1,153 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: none;
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+body {
+  background: linear-gradient(43deg, #4158D0 0%, #C850C0 50%, #FFCC70 100%);
+}
+
+header {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  height: 70px;
+}
+
+.pick-date {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.pick-date input {
+  padding: 10px;
+  border-radius: 15px;
+}
+
+button#btn-app {
+  border: 2px solid #c2c2c2;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: 500ms;
+}
+
+button#btn-app:hover {
+  background-color: rgba(14, 174, 87, 1);
+  border: 2px solid rgba(14, 174, 87, 1);
+  transition: background 500ms ease-in-out
+}
+
+.container {
+  max-width: 1120px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 70px);
+}
+
+.contador {
+  display: none;
+}
+
+.contador.ativo {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+#newCount {
+  border: 2px solid #c2c2c2;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: 500ms;
+}
+
+#newCount:hover {
+  background-color: rgba(14, 174, 87, 1);
+  border: 2px solid rgba(14, 174, 87, 1);
+  transition: background 500ms ease-in-out
+}
+
+.contador ul {
+  display: flex;
+  gap: 25px;
+}
+
+.contador ul li {
+  border: 1px solid rgba(109, 10, 109, 0.5);
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  height: 80px;
+  text-align: center;
+  justify-content: center;
+  background-color: rgba(109, 10, 109, 0.5);
+  color: #fff;
+  font-weight: bolder;
+  box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
+}
+
+.contador ul li span.date-info {
+  font-size: 1rem;
+}
+
+.inativo {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .contador ul {
+    flex-direction: column;
+    gap: 30px;
+    margin: 0 auto;
+  }
+
+  .contador.ativo {
+    width: 100%;
+  }
+
+  .contador.ativo ul {
+    width: 100%;
+  }
+
+  form button#btn-app {
+    width: 100%;
+  }
+
+  .contador ul li,
+  button {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
